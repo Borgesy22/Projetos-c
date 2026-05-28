@@ -1,3 +1,13 @@
+/*INTRODUÇÃO A ALGORITIMOS E ESTRUTURA DE DADOS
+  PROFESSOR: MURILO
+  ALUNOS: ENZO BORGES MOURA, THAISSA DIAS MIRANDA, JOÃO VICTOR
+  
+                        SIMULADOR DE SISTEMA BANCARIO                     */
+
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -43,27 +53,27 @@
         void cadastrarConta1(){
 
             // código do titular
-                    printf("Digite qual sera o seu Codigo do Titular.\n");
+                    printf("Digite qual sera o seu Codigo do Titular: \n");
                     scanf("%d", &codTitular1);
         
               for (codTitular1 ; codTitular1<1000 || codTitular1>9999;)
               {
-                    printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999\n");
+                    printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : ");
                     scanf("%d", &codTitular1);
               }
-                    printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular e: %d.\n", codTitular1);
-                    printf("Codigo da sua conta e: %d\n", numeroConta1);
+                    printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular: %d.\n", codTitular1);
+                    printf("Codigo da sua conta: %d\n", numeroConta1);
 
             // Solicitar o tipo da conta
-                    printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+                    printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                     scanf("%d", &tipoConta1);
 
               for ( tipoConta1; tipoConta1<1 || tipoConta1>3; )
               {
-                    printf("\n Numero invalido! Digite qual sera o tipo da sua conta.\n");
+                    printf("\n Numero invalido! Digite qual sera o tipo da sua conta: \n");
                     scanf("%d", &tipoConta1);
               }
-                    printf("\nTipo de conta cadastrado com sucesso!\n");
+                    printf("Tipo de conta cadastrado com sucesso!\n\n");
 
             // Limite de cheque especial
                 if (tipoConta1 == 1) {
@@ -75,43 +85,43 @@
                 }
 
             //saldo inicial da conta (Valor vai ser atribuido a saldo depois do cadastro)
-                printf("Digite o saldo da sua conta.\n");
+                printf("Digite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial1);
 
             while (saldoInicial1 < 0)
             {
-                printf("Saldo inicial negativo! Digite um valor positivo.\n");
+                printf("Saldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial1);
             }
-                printf("Saldo cadastrado com sucesso! O saldo da sua conta e: %.2lf\n", saldoInicial1);
+                printf("Saldo cadastrado com sucesso! O saldo da sua conta: %.2lf\n", saldoInicial1);
                 saldo1 = saldoInicial1;
             }
             
         void cadastrarConta2(){
 
             // código do titular
-           printf("\nDigite qual sera o seu Codigo do Titular.\n");
+           printf("\nDigite qual sera o seu Codigo do Titular: \n");
             scanf("%d", &codTitular2);
 
             
             for (codTitular2; (codTitular2<1000 || codTitular2>9999) || (codTitular2==codTitular1);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999\n");
+                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : \n");
                 scanf("%d", &codTitular2);      
             }
-                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular e: %d.\n", codTitular2);
-                printf("Codigo da sua conta e: %d\n", numeroConta2);
+                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular: %d.\n", codTitular2);
+                printf("Codigo da sua conta: %d\n", numeroConta2);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta2);
 
             for (tipoConta2; tipoConta2<1 || tipoConta2>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): ");
             scanf("%d", &tipoConta2);
             }
-                printf("\nTipo de conta cadastrado com sucesso!");
+                printf("\nTipo de conta cadastrado com sucesso!\n");
         
             // Limite de cheque especial
                 if (tipoConta2 == 1) {
@@ -124,44 +134,44 @@
 
 
             //saldo inicial da conta (Valor vai ser atribuido a saldo depois do cadastro)
-                printf("\nDigite o saldo da sua conta.\n");
+                printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial2);
 
             while (saldoInicial2 < 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo.\n");
+                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial2);
             }
 
-                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta e: %.2lf\n", saldoInicial2);
+                printf("\n Saldo cadastrado com sucesso! O saldo da sua conta: %.2lf\n", saldoInicial2);
                 saldo2 = saldoInicial2;
             }
 
         void cadastrarConta3(){
 
             // código do titular
-           printf("\nDigite qual sera o seu Codigo do Titular.\n");
+           printf("\nDigite qual sera o seu Codigo do Titular: \n");
             scanf("%d", &codTitular3);
 
             
             for (codTitular3; (codTitular3<1000 || codTitular3>9999) || (codTitular3 == codTitular1||codTitular3==codTitular2);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999\n");
+                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular3);
             }
-                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular e: %d.\n", codTitular3);
+                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular3);
                 printf("Codigo da sua conta e: %d\n", numeroConta3);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta3);
 
             for (tipoConta3; tipoConta3<1 || tipoConta3>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta3);
             }
-                printf("\nTipo de conta cadastrado com sucesso!");
+                printf("\nTipo de conta cadastrado com sucesso!\n");
             
             // Limite de cheque especial
                 if (tipoConta3 == 1) {
@@ -173,39 +183,39 @@
                 }
 
             //saldo inicial da conta (Valor vai ser atribuido a saldo depois do cadastro)
-                printf("\nDigite o saldo da sua conta.\n");
+                printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial3);
 
             while (saldoInicial3 < 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo.\n");
+                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial3);
             }
-                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta e: %.2lf\n", saldoInicial3);
+                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta:  %.2lf\n", saldoInicial3);
                 saldo3 = saldoInicial3;
         }
 
         void cadastrarConta4(){
 
             // código do titular
-           printf("\nDigite qual sera o seu Codigo do Titular.\n");
+           printf("\nDigite qual sera o seu Codigo do Titular: \n");
             scanf("%d", &codTitular4);
   
             for (codTitular4; (codTitular4<1000 || codTitular4>9999) || (codTitular4 == codTitular1 || codTitular4==codTitular2 || codTitular4==codTitular3);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999\n");
+                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular4);      
             }
-                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular e: %d.\n", codTitular4);
+                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular4);
                 printf("Codigo da sua conta e: %d\n", numeroConta4);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta4);
 
             for (tipoConta4; tipoConta4<1 || tipoConta4>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta4);
             }
                 printf("\nTipo de conta cadastrado com sucesso!");
@@ -220,41 +230,41 @@
                 }
 
             //saldo inicial da conta (Valor vai ser atribuido a saldo depois do cadastro)
-                printf("\nDigite o saldo da sua conta.\n");
+                printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial4);
 
             while (saldoInicial4 < 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo.\n");
+                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial4);
             }
 
-                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta e: %.2lf\n", saldoInicial4);
+                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta:  %.2lf\n", saldoInicial4);
                 saldo4 = saldoInicial4;
             }
 
         void cadastrarConta5(){
 
             // código do titular
-           printf("\nDigite qual sera o seu Codigo do Titular.\n");
+           printf("\nDigite qual sera o seu Codigo do Titular: \n");
             scanf("%d", &codTitular5);
 
             
             for (codTitular5; (codTitular5<1000 || codTitular5>9999) || (codTitular5 == codTitular1||codTitular5==codTitular2||codTitular5==codTitular3||codTitular5==codTitular4);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999\n");
+                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular5);  
             }
-                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular e: %d.\n", codTitular5);
+                printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular5);
                 printf("Codigo da sua conta e: %d\n", numeroConta5);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta5);
 
             for (tipoConta5; tipoConta5<1 || tipoConta5>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario).\n");
+            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta5);
             }
                 printf("\nTipo de conta cadastrado com sucesso!");
@@ -269,22 +279,22 @@
                 }
 
             //saldo inicial da conta (Valor vai ser atribuido a saldo depois do cadastro)
-                printf("\nDigite o saldo da sua conta.\n");
+                printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial5);
 
             while (saldoInicial5 < 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo.\n");
+                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial5);
             }
 
-                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta e: %.2lf\n", saldoInicial5);
+                printf("\nSaldo cadastrado com sucesso! O saldo da sua conta:  %.2lf\n", saldoInicial5);
                 saldo5 = saldoInicial5;
             }
 
         void depositar(){
 
-            printf("Carregando...\n");
+            printf("||=============================================================================||\n\n");          
             printf("Digite qual o numero da conta!\n");
             scanf("%d",&num_conta_escolhida);
 
@@ -313,50 +323,50 @@
                     
                      Valor_liquido = deposito - (deposito * TAXA_CORRENTE);
                      saldo1 = saldo1 + Valor_liquido;
-                   printf("\n======Relatorio simples=======\n");
-                   printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
-                   printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
-                   printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                   printf("Saldo atual apos operacao: %.2lf\n",saldo1);
+                   printf("\n         ||==============Relatorio simples===============||\n");
+                   printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
+                   printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
+                   printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                   printf("        Saldo atual apos operacao: %.2lf\n",saldo1);
 
                 }
                 else if (tipoConta1 == 2)
                 {
                     Valor_liquido = deposito;
                     saldo1 = saldo1 + Valor_liquido;
-                    printf("\n======Relatorio simples=======\n");
-                    printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
-                    printf("Valor da taxa aplicada: Isento\n");
-                    printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                    printf("Saldo atual apos operacao: %.2lf\n",saldo1);
+                    printf("\n         ||==============Relatorio simples===============||\n");
+                    printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
+                    printf("        Valor da taxa aplicada: Isento\n");
+                    printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                    printf("        Saldo atual apos operacao: %.2lf\n",saldo1);
                 }
                 else if (tipoConta1 == 3){
                     if (deposito <= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo1 = saldo1 + Valor_liquido;
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
-                            printf("Valor da taxa aplicada: Isento\n");
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo1);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: Isento\n");
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo1);     
                     }
                     else{
 
                         Valor_liquido = deposito - (deposito * TAXA_SALARIO);
                         saldo1 = saldo1 + Valor_liquido;
 
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
-                            printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo1);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo1 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo1);     
                     }   
                               
                 }
 
                     totalDepositado += Valor_liquido;
-                    totalOperacoes++;
+                    totalOperacoes++;                 
             }
 
             //Conta 2
@@ -368,44 +378,44 @@
                     
                     Valor_liquido = deposito - (deposito * TAXA_CORRENTE);
                     saldo2 = saldo2 + Valor_liquido;
-                   printf("\n======Relatorio simples=======\n");
-                  printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
-                   printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
-                   printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                   printf("Saldo atual apos operacao: %.2lf\n",saldo2);
+                   printf("\n         ||==============Relatorio simples===============||\n");
+                   printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
+                   printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
+                   printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                   printf("        Saldo atual apos operacao: %.2lf\n",saldo2);
 
                 }
                 else if (tipoConta2 == 2)
                 {
                     Valor_liquido = deposito;
                     saldo2 = saldo2 + Valor_liquido;
-                    printf("\n======Relatorio simples=======\n");
-                   printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
-                    printf("Valor da taxa aplicada: Isento\n");
-                    printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                    printf("Saldo atual apos operacao: %.2lf\n",saldo2);
+                    printf("\n         ||==============Relatorio simples===============||\n");
+                    printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
+                    printf("        Valor da taxa aplicada: Isento\n");
+                    printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                    printf("        Saldo atual apos operacao: %.2lf\n",saldo2);
                 }
                 else if (tipoConta2 == 3){
                     if (deposito <= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo2 = saldo2 + Valor_liquido;
-                            printf("\n======Relatorio simples=======\n");
-                           printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
-                            printf("Valor da taxa aplicada: Isento\n");
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo2);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: Isento\n");
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo2);     
                     }
                     else{
 
                         Valor_liquido = deposito - (deposito * TAXA_SALARIO);
                         saldo2 = saldo2 + Valor_liquido;
 
-                            printf("\n======Relatorio simples=======\n");
-                           printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
-                            printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo2);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo2 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo2);     
                     }   
                               
                 }
@@ -423,44 +433,44 @@
                     
                      Valor_liquido = deposito - (deposito * TAXA_CORRENTE);
                      saldo3 = saldo3 + Valor_liquido;
-                   printf("\n======Relatorio simples=======\n");
-                  printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
-                   printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
-                   printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                   printf("Saldo atual apos operacao: %.2lf\n",saldo3);
+                   printf("\n         ||==============Relatorio simples===============||\n");
+                   printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
+                   printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
+                   printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                   printf("        Saldo atual apos operacao: %.2lf\n",saldo3);
 
                 }
                 else if (tipoConta3 == 2)
                 {
                     Valor_liquido = deposito;
                     saldo3 = saldo3 + Valor_liquido;
-                    printf("\n======Relatorio simples=======\n");
-                   printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
-                    printf("Valor da taxa aplicada: Isento\n");
-                    printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                    printf("Saldo atual apos operacao: %.2lf\n",saldo3);
+                    printf("\n         ||==============Relatorio simples===============||\n");
+                    printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
+                    printf("        Valor da taxa aplicada: Isento\n");
+                    printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                    printf("        Saldo atual apos operacao: %.2lf\n",saldo3);
                 }
                 else if (tipoConta3 == 3){
                     if (deposito <= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo3 = saldo3 + Valor_liquido;
-                            printf("\n======Relatorio simples=======\n");
-                           printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
-                            printf("Valor da taxa aplicada: Isento\n");
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo3);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: Isento\n");
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo3);     
                     }
                     else{
 
                         Valor_liquido = deposito - (TAXA_SALARIO * deposito);
                         saldo3 = saldo3 + Valor_liquido;
 
-                            printf("\n======Relatorio simples=======\n");
-                           printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
-                            printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo3);     
+                            printf("\n         ||==============Relatorio simples===============||");
+                            printf("\n        Valor Bruto da conta antes do deposito %.2lf\n", saldo3 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo3);     
                     }   
                               
                 }
@@ -477,44 +487,44 @@
                     
                      Valor_liquido = deposito - (deposito * TAXA_CORRENTE);
                      saldo4 = saldo4 + Valor_liquido;
-                   printf("\n======Relatorio simples=======\n");
-                   printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
-                   printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
-                   printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                   printf("Saldo atual apos operacao: %.2lf\n",saldo4);
+                   printf("\n         ||==============Relatorio simples===============||\n");
+                   printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
+                   printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
+                   printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                   printf("        Saldo atual apos operacao: %.2lf\n",saldo4);
 
                 }
                 else if (tipoConta4 == 2)
                 {
                     Valor_liquido = deposito;
                     saldo4 = saldo4 + Valor_liquido;
-                    printf("\n======Relatorio simples=======\n");
-                    printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
-                    printf("Valor da taxa aplicada: Isento\n");
-                    printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                    printf("Saldo atual apos operacao: %.2lf\n",saldo4);
+                    printf("\n         ||==============Relatorio simples===============||\n");
+                    printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
+                    printf("        Valor da taxa aplicada: Isento\n");
+                    printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                    printf("        Saldo atual apos operacao: %.2lf\n",saldo4);
                 }
                 else if (tipoConta4 == 3){
                     if (deposito <= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo4 = saldo4 + Valor_liquido;
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
-                            printf("Valor da taxa aplicada: Isento\n");
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo4);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: Isento\n");
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo4);     
                     }
                     else{
 
                         Valor_liquido = deposito - (deposito * TAXA_SALARIO);
                         saldo4 = saldo4 + Valor_liquido;
 
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
-                            printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo4);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo4 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo4);     
                     }   
                               
                 }
@@ -532,44 +542,44 @@
                     
                      Valor_liquido = deposito - (deposito * TAXA_CORRENTE);
                      saldo5 = saldo5 + Valor_liquido;
-                   printf("\n======Relatorio simples=======\n");
-                   printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
-                   printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
-                   printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                   printf("Saldo atual apos operacao: %.2lf\n",saldo5);
+                   printf("\n         ||==============Relatorio simples===============||\n");
+                   printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
+                   printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_CORRENTE * 100);
+                   printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                   printf("        Saldo atual apos operacao: %.2lf\n",saldo5);
 
                 }
                 else if (tipoConta5 == 2)
                 {
                     Valor_liquido = deposito;
                     saldo5 = saldo5 + Valor_liquido;
-                    printf("\n======Relatorio simples=======\n");
-                    printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
-                    printf("Valor da taxa aplicada: Isento\n");
-                    printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                    printf("Saldo atual apos operacao: %.2lf\n",saldo5);
+                    printf("\n         ||==============Relatorio simples===============||\n");
+                    printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
+                    printf("        Valor da taxa aplicada: Isento\n");
+                    printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                    printf("        Saldo atual apos operacao: %.2lf\n",saldo5);
                 }
                 else if (tipoConta5 == 3){
                     if (deposito <= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;   
                         saldo5 = saldo5 + Valor_liquido;
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
-                            printf("Valor da taxa aplicada: Isento\n");
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo5);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: Isento\n");
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo5);     
                     }
                     else{
 
                         Valor_liquido = deposito - (deposito * TAXA_SALARIO);
                         saldo5 = saldo5 + Valor_liquido;
 
-                            printf("\n======Relatorio simples=======\n");
-                            printf("Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
-                            printf("Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
-                            printf("Valor liquido creditado: %.2lf\n",Valor_liquido);
-                            printf("Saldo atual apos operacao: %.2lf\n",saldo5);     
+                            printf("\n         ||==============Relatorio simples===============||\n");
+                            printf("        Valor Bruto da conta antes do deposito %.2lf\n", saldo5 - Valor_liquido);
+                            printf("        Valor da taxa aplicada: %.1lf%%\n", TAXA_SALARIO * 100);
+                            printf("        Valor liquido creditado: %.2lf\n",Valor_liquido);
+                            printf("        Saldo atual apos operacao: %.2lf\n",saldo5);     
                     }   
                               
                 }
@@ -577,13 +587,13 @@
                     totalDepositado += Valor_liquido;
                     totalOperacoes++;
             }
-
+                     printf("\n\n||=============================================================================||\n\n");
 
         }
             
         void sacar(){
 
-            printf("Carregando...\n");
+            printf("||=============================================================================||\n\n");
             printf("Digite qual o numero da conta!\n");
             scanf("%d", &num_conta_escolhida);
 
@@ -717,9 +727,11 @@
 
             totalSacado += saque;
             totalOperacoes++;
-            printf("\n======Relatorio simples=======\n");
-            printf("Valor sacado: %.2lf\n", saque);
-            printf("Novo saldo: %.2lf\n", saldoAtual);
+            printf("\n         ||==============Relatorio simples===============||\n");
+            printf("         Valor sacado: %.2lf\n", saque);
+            printf("         Novo saldo: %.2lf", saldoAtual);
+
+             printf("\n\n||=============================================================================||\n\n"); 
         }
                           
         void transferir()
@@ -728,7 +740,7 @@
             double valorTransferencia; double valor_liquido_transferencia;  double saldoOrigem;
             double saldoDestino; double limiteOrigem;
             
-            printf("Carregando...\n");
+             printf("||=============================================================================||\n\n");
             printf("Digite o numero da conta de origem:\n");
             scanf("%d", &contaOrigem);
 
@@ -922,7 +934,7 @@
                 saldo5 = saldoDestino + valor_liquido_transferencia;
             }
 
-            printf("\n======Relatorio simples=======\n");
+            printf("\n         ||==============Relatorio simples===============||\n");
             printf("Conta de origem: %d\n", contaOrigem);
             printf("Conta de destino: %d\n", contaDestino);
             printf("Valor bruto da transferencia: %.2lf\n", valorTransferencia);
@@ -986,6 +998,7 @@
             totalSacado += valorTransferencia;
             totalDepositado += valor_liquido_transferencia;
             totalOperacoes += 2;
+             printf("\n\n||=============================================================================||\n\n");
         }
         
         void aplicarRendimentoConta(void){
@@ -995,7 +1008,7 @@
             double saldoFinal;
             double valorAplicado;
 
-            printf("Carregando...\n");
+             printf("||=============================================================================||\n\n");
             printf("Aplicando rendimento mensal em todas as contas...\n\n");
 
             // Conta 1
@@ -1022,7 +1035,7 @@
             printf("Saldo anterior: %.2lf\n", saldoAnterior);
             printf("Valor aplicado: %.2lf\n", valorAplicado);
             printf("Saldo final: %.2lf\n\n", saldoFinal);
-            printf("=======================================================================================================\n");
+            printf("=================================================================\n");
 
             // Conta 2
             saldoAnterior = saldo2;
@@ -1048,7 +1061,7 @@
             printf("Saldo anterior: %.2lf\n", saldoAnterior);
             printf("Valor aplicado: %.2lf\n", valorAplicado);
             printf("Saldo final: %.2lf\n\n", saldoFinal);
-            printf("=======================================================================================================\n");
+            printf("=================================================================\n");
 
             // Conta 3
             saldoAnterior = saldo3;
@@ -1074,7 +1087,7 @@
             printf("Saldo anterior: %.2lf\n", saldoAnterior);
             printf("Valor aplicado: %.2lf\n", valorAplicado);
             printf("Saldo final: %.2lf\n\n", saldoFinal);
-            printf("=======================================================================================================\n");
+            printf("=================================================================\n");
 
             // Conta 4
             saldoAnterior = saldo4;
@@ -1100,7 +1113,7 @@
             printf("Saldo anterior: %.2lf\n", saldoAnterior);
             printf("Valor aplicado: %.2lf\n", valorAplicado);
             printf("Saldo final: %.2lf\n\n", saldoFinal);
-            printf("=======================================================================================================\n");
+            printf("=================================================================\n");
 
             // Conta 5
             saldoAnterior = saldo5;
@@ -1126,13 +1139,14 @@
             printf("Saldo anterior: %.2lf\n", saldoAnterior);
             printf("Valor aplicado: %.2lf\n", valorAplicado);
             printf("Saldo final: %.2lf\n\n", saldoFinal);
-            printf("=======================================================================================================\n");
+            printf("=================================================================\n");
+             printf("\n\n||=============================================================================||\n\n");
         }
       
         void  exibirExtrato(){
 
             // Exibição de todas as contas
-            printf("Carregando...\n");
+            printf("||=============================================================================||\n\n");
             printf("Digite o numero da conta para exibir o extrato:\n");
             scanf("%d", &num_conta_escolhida);
 
@@ -1166,7 +1180,7 @@
                     {
                         printf("Saude financeira: Ruim (Codigo 1)\n");
                     }
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta2){
                 printf("Extrato da Conta %d:\n", numeroConta2);
@@ -1192,7 +1206,7 @@
                     {
                         printf("Saude financeira: Ruim (Codigo 1)\n");
                     }
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta3){
                 printf("Extrato da Conta %d:\n", numeroConta3);
@@ -1218,7 +1232,7 @@
                     {
                         printf("Saude financeira: Ruim (Codigo 1)\n");
                     }
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta4){
                 printf("Extrato da Conta %d:\n", numeroConta4);
@@ -1244,7 +1258,7 @@
                     {
                         printf("Saude financeira: Ruim (Codigo 1)\n");
                     }
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta5){
                 printf("Extrato da Conta %d:\n", numeroConta5);
@@ -1270,14 +1284,16 @@
                     {
                         printf("Saude financeira: Ruim (Codigo 1)\n");
                     }
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
+                
             }
+             printf("||=============================================================================||\n\n");
         }
 
         void  relatorioGeral(){
 
              //exibição
-            printf("Carregando...\n");
+            printf("||=============================================================================||\n\n");
             printf("Digite o numero da conta para exibir o relatorio geral:\n");
             scanf("%d", &num_conta_escolhida);
 
@@ -1292,47 +1308,31 @@
             printf("=========================\nMedia dos saldos: %.2lf\n", (saldo1 + saldo2 + saldo3 + saldo4 + saldo5) / 5);
 
             // Maior saldo
-            if (saldo1 > saldo2 && saldo2 > saldo3 && saldo3 > saldo4 && saldo4 > saldo5)
             {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo1, numeroConta1, codTitular1);
-            }
-            else if (saldo2 > saldo3 && saldo3 > saldo4 && saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo2, numeroConta2, codTitular2);
-            }
-            else if (saldo3 > saldo4 && saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo3, numeroConta3, codTitular3);
-            }
-            else if (saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo4, numeroConta4, codTitular4);
-            }
-            else
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo5, numeroConta5, codTitular5);
+                double maiorSaldo = saldo1;
+                int contaMaior = numeroConta1;
+                int titularMaior = codTitular1;
+
+                if (saldo2 > maiorSaldo) { maiorSaldo = saldo2; contaMaior = numeroConta2; titularMaior = codTitular2; }
+                if (saldo3 > maiorSaldo) { maiorSaldo = saldo3; contaMaior = numeroConta3; titularMaior = codTitular3; }
+                if (saldo4 > maiorSaldo) { maiorSaldo = saldo4; contaMaior = numeroConta4; titularMaior = codTitular4; }
+                if (saldo5 > maiorSaldo) { maiorSaldo = saldo5; contaMaior = numeroConta5; titularMaior = codTitular5; }
+
+                printf("Maior saldo: %.2lf da conta %d do titular %d\n", maiorSaldo, contaMaior, titularMaior);
             }
             
             // Menor saldo
-            if (saldo1 < saldo2 && saldo2 < saldo3 && saldo3 < saldo4 && saldo4 < saldo5)
             {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo1, numeroConta1, codTitular1);
-            }
-            else if (saldo2 < saldo3 && saldo3 < saldo4 && saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo2, numeroConta2, codTitular2);
-            }
-            else if (saldo3 < saldo4 && saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo3, numeroConta3, codTitular3);
-            }
-            else if (saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo4, numeroConta4, codTitular4);
-            }
-            else
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo5, numeroConta5, codTitular5);
+                double menorSaldo = saldo1;
+                int contaMenor = numeroConta1;
+                int titularMenor = codTitular1;
+
+                if (saldo2 < menorSaldo) { menorSaldo = saldo2; contaMenor = numeroConta2; titularMenor = codTitular2; }
+                if (saldo3 < menorSaldo) { menorSaldo = saldo3; contaMenor = numeroConta3; titularMenor = codTitular3; }
+                if (saldo4 < menorSaldo) { menorSaldo = saldo4; contaMenor = numeroConta4; titularMenor = codTitular4; }
+                if (saldo5 < menorSaldo) { menorSaldo = saldo5; contaMenor = numeroConta5; titularMenor = codTitular5; }
+
+                printf("Menor saldo: %.2lf da conta %d do titular %d\n", menorSaldo, contaMenor, titularMenor);
             }
 
             printf("Soma total dos saldos: %.2lf\n", saldo1 + saldo2 + saldo3 + saldo4 + saldo5);
@@ -1416,11 +1416,12 @@
                     contasSalario++;
                 }
                 printf(" %d\n", contasSalario);
+                printf("\n\n||=============================================================================||\n\n");
         }
         
         void   relatorioFinal(){
 
-             printf("Carregando...\n");
+            printf("||=============================================================================||\n\n"); 
             printf("Digite o numero da conta para exibir o relatorio Final:\n");
             scanf("%d", &num_conta_escolhida);
 
@@ -1435,47 +1436,31 @@
             printf("=========================\nMedia dos saldos: %.2lf\n", (saldo1 + saldo2 + saldo3 + saldo4 + saldo5) / 5);
 
             // Maior saldo
-            if (saldo1 > saldo2 && saldo2 > saldo3 && saldo3 > saldo4 && saldo4 > saldo5)
             {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo1, numeroConta1, codTitular1);
-            }
-            else if (saldo2 > saldo3 && saldo3 > saldo4 && saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo2, numeroConta2, codTitular2);
-            }
-            else if (saldo3 > saldo4 && saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo3, numeroConta3, codTitular3);
-            }
-            else if (saldo4 > saldo5)
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo4, numeroConta4, codTitular4);
-            }
-            else
-            {
-                printf("Maior saldo: %.2lf da conta %d do titular %d\n", saldo5, numeroConta5, codTitular5);
+                double maiorSaldo = saldo1;
+                int contaMaior = numeroConta1;
+                int titularMaior = codTitular1;
+
+                if (saldo2 > maiorSaldo) { maiorSaldo = saldo2; contaMaior = numeroConta2; titularMaior = codTitular2; }
+                if (saldo3 > maiorSaldo) { maiorSaldo = saldo3; contaMaior = numeroConta3; titularMaior = codTitular3; }
+                if (saldo4 > maiorSaldo) { maiorSaldo = saldo4; contaMaior = numeroConta4; titularMaior = codTitular4; }
+                if (saldo5 > maiorSaldo) { maiorSaldo = saldo5; contaMaior = numeroConta5; titularMaior = codTitular5; }
+
+                printf("Maior saldo: %.2lf da conta %d do titular %d\n", maiorSaldo, contaMaior, titularMaior);
             }
             
             // Menor saldo
-            if (saldo1 < saldo2 && saldo2 < saldo3 && saldo3 < saldo4 && saldo4 < saldo5)
             {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo1, numeroConta1, codTitular1);
-            }
-            else if (saldo2 < saldo3 && saldo3 < saldo4 && saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo2, numeroConta2, codTitular2);
-            }
-            else if (saldo3 < saldo4 && saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo3, numeroConta3, codTitular3);
-            }
-            else if (saldo4 < saldo5)
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo4, numeroConta4, codTitular4);
-            }
-            else
-            {
-                printf("Menor saldo: %.2lf da conta %d do titular %d\n", saldo5, numeroConta5, codTitular5);
+                double menorSaldo = saldo1;
+                int contaMenor = numeroConta1;
+                int titularMenor = codTitular1;
+
+                if (saldo2 < menorSaldo) { menorSaldo = saldo2; contaMenor = numeroConta2; titularMenor = codTitular2; }
+                if (saldo3 < menorSaldo) { menorSaldo = saldo3; contaMenor = numeroConta3; titularMenor = codTitular3; }
+                if (saldo4 < menorSaldo) { menorSaldo = saldo4; contaMenor = numeroConta4; titularMenor = codTitular4; }
+                if (saldo5 < menorSaldo) { menorSaldo = saldo5; contaMenor = numeroConta5; titularMenor = codTitular5; }
+
+                printf("Menor saldo: %.2lf da conta %d do titular %d\n", menorSaldo, contaMenor, titularMenor);
             }
 
             printf("Soma total dos saldos: %.2lf\n", saldo1 + saldo2 + saldo3 + saldo4 + saldo5);
@@ -1560,107 +1545,101 @@
                 }
                 printf(" %d\n", contasSalario);
 
-                printf("===========================================================");
+                printf("===========================================================\n\n");
                 
             if(num_conta_escolhida == numeroConta1){
                 printf("Extrato da Conta %d:\n", numeroConta1);
                 printf("Numero da conta: %d\n", numeroConta1);
                 printf("Codigo do titular: %d\n", codTitular1);
-                printf("Saldo inicial: %f",saldoInicial1);               
+                printf("Saldo inicial: %f\n",saldoInicial1);               
                 printf("Saldo atual: %.2lf\n", saldo1);
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta2){
                 printf("Extrato da Conta %d:\n", numeroConta2);
                 printf("Numero da conta: %d\n", numeroConta2);
                 printf("Codigo do titular: %d\n", codTitular2);
-                printf("Saldo inicial: %f",saldoInicial2);              
+                printf("Saldo inicial: %f\n",saldoInicial2);              
                 printf("Saldo atual: %.2lf\n", saldo2);
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta3){
                 printf("Extrato da Conta %d:\n", numeroConta3);
                 printf("Numero da conta: %d\n", numeroConta3);
                 printf("Codigo do titular: %d\n", codTitular3);
-                printf("Saldo inicial: %f",saldoInicial3);         
+                printf("Saldo inicial: %f\n",saldoInicial3);         
                 printf("Saldo atual: %.2lf\n", saldo3);
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta4){
                 printf("Extrato da Conta %d:\n", numeroConta4);
                 printf("Numero da conta: %d\n", numeroConta4);
                 printf("Codigo do titular: %d\n", codTitular4);
-                printf("Saldo inicial: %f",saldoInicial4);               
+                printf("Saldo inicial: %f\n",saldoInicial4);               
                 printf("Saldo atual: %.2lf\n", saldo4);
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
             }
             else if(num_conta_escolhida == numeroConta5){
                 printf("Extrato da Conta %d:\n", numeroConta5);
                 printf("Numero da conta: %d\n", numeroConta5);
-                printf("Saldo inicial: %f",saldoInicial5);
+                printf("Saldo inicial: %f\n",saldoInicial5);
                 printf("Codigo do titular: %d\n", codTitular5);
                 printf("Saldo atual: %.2lf\n", saldo5);
-                printf("===============================================================================================\n");
+                printf("=================================================================\n");
 
                  double variancia;
                 
                 if (num_conta_escolhida == numeroConta1)
                 {
                     variancia = ((saldo1 - saldoInicial1)/saldoInicial1) * 100;
-                    printf("Variacao percentual da cona 1001:%f", variancia);
+                    printf("Variacao percentual da conta 1001:%f", variancia);
                 }
                 else if (num_conta_escolhida == numeroConta2)
                 {
                     variancia = ((saldo2 - saldoInicial2)/saldoInicial2) * 100;
-                     printf("Variacao percentual da cona 1002:%f", variancia);
+                     printf("Variacao percentual da conta 1002:%f", variancia);
                 }
                 else if (num_conta_escolhida == numeroConta3)
                 {
                     variancia = ((saldo3 - saldoInicial3)/saldoInicial3) * 100;
-                     printf("Variacao percentual da cona 1003:%f", variancia);
+                     printf("Variacao percentual da conta 1003:%f", variancia);
                 }
                 else if (num_conta_escolhida == numeroConta4){
 
                     variancia = ((saldo4 - saldoInicial4)/saldoInicial4) * 100;
-                     printf("Variacao percentual da cona 1004:%f", variancia);
+                     printf("Variacao percentual da conta 1004:%f", variancia);
                 }
                 else if (num_conta_escolhida == numeroConta5)
                 {
                     variancia = ((saldo5 - saldoInicial5)/saldoInicial5) * 100;
-                     printf("Variacao percentual da cona 1005:%f", variancia);
+                     printf("Variacao percentual da conta 1005:%f", variancia);
                 }     
         }
+         printf("\n\n||=============================================================================||\n\n");
     }
 
         
     int main() {    
         
-    printf("\n=====Bem-vindo ao Sistema de Simulacao de Banco!=====\n");
-    printf("=====Vamos comecar cadastrando as contas...=====\n");
+    printf("\n||=====Bem-vindo ao Sistema de Simulacao de Banco!=====||\n");
+    printf("||=====Vamos comecar cadastrando as contas!=====||\n");
 
         //Cadastro
-                printf("\nCadastro da Conta 1:\n");
+                printf("\nCadastro da Conta 1\n");
                 cadastrarConta1();
-                printf("=======================================================================================================");
-                printf("\nCadastro da Conta 2:\n");
-                cadastrarConta2();
-                printf("=======================================================================================================");
-                printf("\nCadastro da Conta 3");
-                cadastrarConta3();
-                printf("=======================================================================================================");
-                 printf("\nCadastro da Conta 4");
-                cadastrarConta4();
-                printf("=======================================================================================================");
-                 printf("\nCadastro da Conta 5");
-                cadastrarConta5();
-                printf("=======================================================================================================");
-
+                printf("||=============================================================================||\n\n");
+                
+               
         //Menu
 
         do {
-            printf(" =================================\n BEM-VINDO AO SISTEMA BANCARIO - MENU PRINCIPAL \n =================================");
-            printf("\n [1] Depositar\n [2] Saque\n [3] Transferir entre contas\n [4] Aplicar rendimento mensal\n [5] Exibir extrato de uma conta\n [6] Exibir relatorio geral\n [0] Encerrar e gerar relatorio\n");
-            scanf("%d",&opcao_menu);
+            printf("           || =================================================== ||\n                 BEM-VINDO AO SISTEMA BANCARIO - MENU PRINCIPAL \n           || =================================================== ||");
+            printf("\n             [1] Depositar\n             [2] Saque\n             [3] Transferir entre contas\n             [4] Aplicar rendimento mensal\n             [5] Exibir extrato de uma conta\n             [6] Exibir relatorio geral\n             [0] Encerrar e gerar relatorio\n \n");         
+            
+            printf("           Digite sua opcao: ==>  ");
+            scanf("%d",&opcao_menu);  printf("\n");
+           
+            printf("           ||====================================================||\n");
 
                 switch (opcao_menu)
                 {
