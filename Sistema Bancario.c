@@ -1634,8 +1634,18 @@
                 printf("\nCadastro da Conta 1\n");
                 cadastrarConta1();
                 printf("||=============================================================================||\n\n");
-                
-               
+                printf("\nCadastro da Conta 2\n");
+                cadastrarConta2();
+                printf("||=============================================================================||\n\n");
+                printf("\nCadastro da Conta 3\n");
+                cadastrarConta3();
+                printf("||=============================================================================||\n\n");
+                printf("\nCadastro da Conta 4\n");
+                cadastrarConta4();
+                printf("||=============================================================================||\n\n");
+                printf("\nCadastro da Conta 5\n");
+                cadastrarConta5();
+                printf("||=============================================================================||\n\n");
         //Menu
 
         do {
