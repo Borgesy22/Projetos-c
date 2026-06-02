@@ -12,8 +12,6 @@
 
 
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -1300,15 +1298,38 @@
 
              //exibição
             printf("||=============================================================================||\n\n");
-            printf("Digite o numero da conta para exibir o relatorio geral:\n");
-            scanf("%d", &num_conta_escolhida);
+            printf("                  Gerando relatorio geral...   \n\n");
+            printf("||=============================================================================||\n\n");
 
-             if (num_conta_escolhida < 1001 || num_conta_escolhida > 1005)
-            {
-                printf("Erro 1! Conta invalida.\n");
-                return;
-            }
-            printf("Gerando relatorio geral...\n\n");
+            printf("Numero da conta: %d\n", numeroConta1);
+            printf("Codigo do titular: %d\n", codTitular1);
+            printf("Tipo de conta: %d\n", tipoConta1);               
+            printf("Saldo atual: %.2lf\n", saldo1);
+
+            printf("||=============================================================================||\n\n");
+            printf("Numero da conta: %d\n", numeroConta2);
+            printf("Codigo do titular: %d\n", codTitular2);
+            printf("Tipo de conta: %d\n", tipoConta2);               
+            printf("Saldo atual: %.2lf\n", saldo2);
+
+            printf("||=============================================================================||\n\n");
+            printf("Numero da conta: %d\n", numeroConta3);
+            printf("Codigo do titular: %d\n", codTitular3);
+            printf("Tipo de conta: %d\n", tipoConta3);               
+            printf("Saldo atual: %.2lf\n", saldo3);
+
+            printf("||=============================================================================||\n\n");
+            printf("Numero da conta: %d\n", numeroConta4);
+            printf("Codigo do titular: %d\n", codTitular4);
+            printf("Tipo de conta: %d\n", tipoConta4);               
+            printf("Saldo atual: %.2lf\n", saldo4);
+
+            printf("||=============================================================================||\n\n");
+            printf("Numero da conta: %d\n", numeroConta5);
+            printf("Codigo do titular: %d\n", codTitular5);
+            printf("Tipo de conta: %d\n", tipoConta5);           
+            printf("Saldo atual: %.2lf\n", saldo5);
+            printf("||=============================================================================||\n\n");
 
             // Media dos saldos
             printf("=========================\nMedia dos saldos: %.2lf\n", (saldo1 + saldo2 + saldo3 + saldo4 + saldo5) / 5);
@@ -1428,14 +1449,6 @@
         void   relatorioFinal(){
 
             printf("||=============================================================================||\n\n"); 
-            printf("Digite o numero da conta para exibir o relatorio Final:\n");
-            scanf("%d", &num_conta_escolhida);
-
-             if (num_conta_escolhida < 1001 || num_conta_escolhida > 1005)
-            {
-                printf("Erro 1! Conta invalida.\n");
-                return;
-            }
             printf("Gerando Relatorio Final...\n\n");
 
             // Media dos saldos
@@ -1553,39 +1566,39 @@
 
                 printf("===========================================================\n\n");
                 
-            if(num_conta_escolhida == numeroConta1){
+            
                 printf("Extrato da Conta %d:\n", numeroConta1);
                 printf("Numero da conta: %d\n", numeroConta1);
                 printf("Codigo do titular: %d\n", codTitular1);
                 printf("Saldo inicial: %f\n",saldoInicial1);               
                 printf("Saldo atual: %.2lf\n", saldo1);
                 printf("=================================================================\n");
-            }
-            else if(num_conta_escolhida == numeroConta2){
+            
+            
                 printf("Extrato da Conta %d:\n", numeroConta2);
                 printf("Numero da conta: %d\n", numeroConta2);
                 printf("Codigo do titular: %d\n", codTitular2);
                 printf("Saldo inicial: %f\n",saldoInicial2);              
                 printf("Saldo atual: %.2lf\n", saldo2);
                 printf("=================================================================\n");
-            }
-            else if(num_conta_escolhida == numeroConta3){
+            
+            
                 printf("Extrato da Conta %d:\n", numeroConta3);
                 printf("Numero da conta: %d\n", numeroConta3);
                 printf("Codigo do titular: %d\n", codTitular3);
                 printf("Saldo inicial: %f\n",saldoInicial3);         
                 printf("Saldo atual: %.2lf\n", saldo3);
                 printf("=================================================================\n");
-            }
-            else if(num_conta_escolhida == numeroConta4){
+            
+           
                 printf("Extrato da Conta %d:\n", numeroConta4);
                 printf("Numero da conta: %d\n", numeroConta4);
                 printf("Codigo do titular: %d\n", codTitular4);
                 printf("Saldo inicial: %f\n",saldoInicial4);               
                 printf("Saldo atual: %.2lf\n", saldo4);
                 printf("=================================================================\n");
-            }
-            else if(num_conta_escolhida == numeroConta5){
+            
+            
                 printf("Extrato da Conta %d:\n", numeroConta5);
                 printf("Numero da conta: %d\n", numeroConta5);
                 printf("Saldo inicial: %f\n",saldoInicial5);
@@ -1595,32 +1608,23 @@
 
                  double variancia;
                 
-                if (num_conta_escolhida == numeroConta1)
-                {
+                //Calculo das variancias
                     variancia = ((saldo1 - saldoInicial1)/saldoInicial1) * 100;
                     printf("Variacao percentual da conta 1001:%f", variancia);
-                }
-                else if (num_conta_escolhida == numeroConta2)
-                {
+                
                     variancia = ((saldo2 - saldoInicial2)/saldoInicial2) * 100;
                      printf("Variacao percentual da conta 1002:%f", variancia);
-                }
-                else if (num_conta_escolhida == numeroConta3)
-                {
+               
                     variancia = ((saldo3 - saldoInicial3)/saldoInicial3) * 100;
                      printf("Variacao percentual da conta 1003:%f", variancia);
-                }
-                else if (num_conta_escolhida == numeroConta4){
-
+               
                     variancia = ((saldo4 - saldoInicial4)/saldoInicial4) * 100;
                      printf("Variacao percentual da conta 1004:%f", variancia);
-                }
-                else if (num_conta_escolhida == numeroConta5)
-                {
+                
                     variancia = ((saldo5 - saldoInicial5)/saldoInicial5) * 100;
                      printf("Variacao percentual da conta 1005:%f", variancia);
-                }     
-        }
+                     
+        
          printf("\n\n||=============================================================================||\n\n");
     }
 
