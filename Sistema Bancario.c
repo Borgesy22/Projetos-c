@@ -444,7 +444,7 @@
             }
 
             //Conta 3
-             if (num_conta_escolhida == numeroConta3)
+             else if (num_conta_escolhida == numeroConta3)
             {
                 
                 if (tipoConta3 == 1)
@@ -498,7 +498,7 @@
                     totalOperacoes++;
             }
             //Conta 4
-                 if (num_conta_escolhida == numeroConta4)
+                else if (num_conta_escolhida == numeroConta4)
             {
                 
                 if (tipoConta4 == 1)
@@ -553,7 +553,7 @@
             }
                 //Conta 5
 
-             if (num_conta_escolhida == numeroConta5)
+             else if (num_conta_escolhida == numeroConta5)
             {
                 
                 if (tipoConta5 == 1)
@@ -896,7 +896,7 @@
             }
             else if (tipoDestino == 3)
             {
-                if (valorTransferencia <= SALARIO_MINIMO)
+                if (valorTransferencia >= SALARIO_MINIMO)
                 {
                     valor_liquido_transferencia = valorTransferencia;
                 }
@@ -1034,16 +1034,8 @@
             saldoAnterior = saldo1;
             if (saldoAnterior < 0)
             {
-                if (tipoConta1 == 1)
-                {
-                    saldoFinal = saldoAnterior;
-                    valorAplicado = 0.0;
-                }
-                else
-                {
-                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
-                    valorAplicado = saldoFinal - saldoAnterior;
-                }
+                saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                valorAplicado = saldoFinal - saldoAnterior;
                 saldo1 = saldoFinal;
             }
             else if (tipoConta1 == 2)
@@ -1068,16 +1060,8 @@
             saldoAnterior = saldo2;
             if (saldoAnterior < 0)
             {
-                if (tipoConta2 == 1)
-                {
-                    saldoFinal = saldoAnterior;
-                    valorAplicado = 0.0;
-                }
-                else
-                {
-                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
-                    valorAplicado = saldoFinal - saldoAnterior;
-                }
+                saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                valorAplicado = saldoFinal - saldoAnterior;
                 saldo2 = saldoFinal;
             }
             else if (tipoConta2 == 2)
@@ -1102,16 +1086,8 @@
             saldoAnterior = saldo3;
             if (saldoAnterior < 0)
             {
-                if (tipoConta3 == 1)
-                {
-                    saldoFinal = saldoAnterior;
-                    valorAplicado = 0.0;
-                }
-                else
-                {
-                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
-                    valorAplicado = saldoFinal - saldoAnterior;
-                }
+                saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                valorAplicado = saldoFinal - saldoAnterior;
                 saldo3 = saldoFinal;
             }
             else if (tipoConta3 == 2)
@@ -1136,16 +1112,8 @@
             saldoAnterior = saldo4;
             if (saldoAnterior < 0)
             {
-                if (tipoConta4 == 1)
-                {
-                    saldoFinal = saldoAnterior;
-                    valorAplicado = 0.0;
-                }
-                else
-                {
-                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
-                    valorAplicado = saldoFinal - saldoAnterior;
-                }
+                saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                valorAplicado = saldoFinal - saldoAnterior;
                 saldo4 = saldoFinal;
             }
             else if (tipoConta4 == 2)
@@ -1170,16 +1138,8 @@
             saldoAnterior = saldo5;
             if (saldoAnterior < 0)
             {
-                if (tipoConta5 == 1)
-                {
-                    saldoFinal = saldoAnterior;
-                    valorAplicado = 0.0;
-                }
-                else
-                {
-                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
-                    valorAplicado = saldoFinal - saldoAnterior;
-                }
+                saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                valorAplicado = saldoFinal - saldoAnterior;
                 saldo5 = saldoFinal;
             }
             else if (tipoConta5 == 2)
