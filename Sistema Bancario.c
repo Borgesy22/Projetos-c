@@ -1637,36 +1637,53 @@
                  double variancia;
                 
                 // Calculo das variancias
-                    if (saldoInicial1 != 0.0) {
-                        variancia = ((saldo1 - saldoInicial1) / saldoInicial1) * 100;
-                        printf("Variacao percentual da conta 1001: %.2lf%%\n", variancia);
-                    } else {
-                        printf("Variacao percentual da conta 1001: N/A (saldo inicial zero)\n");
-                    }
-                    if (saldoInicial2 != 0.0) {
-                        variancia = ((saldo2 - saldoInicial2) / saldoInicial2) * 100;
-                        printf("Variacao percentual da conta 1002: %.2lf%%\n", variancia);
-                    } else {
-                        printf("Variacao percentual da conta 1002: N/A (saldo inicial zero)\n");
-                    }
-                    if (saldoInicial3 != 0.0) {
-                        variancia = ((saldo3 - saldoInicial3) / saldoInicial3) * 100;
-                        printf("Variacao percentual da conta 1003: %.2lf%%\n", variancia);
-                    } else {
-                        printf("Variacao percentual da conta 1003: N/A (saldo inicial zero)\n");
-                    }
-                    if (saldoInicial4 != 0.0) {
-                        variancia = ((saldo4 - saldoInicial4) / saldoInicial4) * 100;
-                        printf("Variacao percentual da conta 1004: %.2lf%%\n", variancia);
-                    } else {
-                        printf("Variacao percentual da conta 1004: N/A (saldo inicial zero)\n");
-                    }
-                    if (saldoInicial5 != 0.0) {
-                        variancia = ((saldo5 - saldoInicial5) / saldoInicial5) * 100;
-                        printf("Variacao percentual da conta 1005: %.2lf%%\n", variancia);
-                    } else {
-                        printf("Variacao percentual da conta 1005: N/A (saldo inicial zero)\n");
-                    }
+                
+                double var1 = 0.0, var2 = 0.0, var3 = 0.0, var4 = 0.0, var5 = 0.0;
+
+                // Calcular e armazenar cada variação
+                if (saldoInicial1 != 0.0) var1 = ((saldo1 - saldoInicial1) / saldoInicial1) * 100;
+                if (saldoInicial2 != 0.0) var2 = ((saldo2 - saldoInicial2) / saldoInicial2) * 100;
+                if (saldoInicial3 != 0.0) var3 = ((saldo3 - saldoInicial3) / saldoInicial3) * 100;
+                if (saldoInicial4 != 0.0) var4 = ((saldo4 - saldoInicial4) / saldoInicial4) * 100;
+                if (saldoInicial5 != 0.0) var5 = ((saldo5 - saldoInicial5) / saldoInicial5) * 100;
+
+                // Exibir as variações
+                printf("Variacao percentual da conta 1001: %+.2lf%%\n", var1);
+                printf("Variacao percentual da conta 1002: %+.2lf%%\n", var2);
+                printf("Variacao percentual da conta 1003: %+.2lf%%\n", var3);
+                printf("Variacao percentual da conta 1004: %+.2lf%%\n", var4);
+                printf("Variacao percentual da conta 1005: %+.2lf%%\n", var5);
+                printf("=================================================================\n");
+
+                // Maior Valorização
+                double maiorVar = var1;
+                int titularMaiorVar = codTitular1;
+
+                if (var2 > maiorVar) { maiorVar = var2; titularMaiorVar = codTitular2; }
+                if (var3 > maiorVar) { maiorVar = var3; titularMaiorVar = codTitular3; }
+                if (var4 > maiorVar) { maiorVar = var4; titularMaiorVar = codTitular4; }
+                if (var5 > maiorVar) { maiorVar = var5; titularMaiorVar = codTitular5; }
+
+                //Maior Desvalorização 
+                double menorVar = var1;
+                int titularMenorVar = codTitular1;
+
+                if (var2 < menorVar) { menorVar = var2; titularMenorVar = codTitular2; }
+                if (var3 < menorVar) { menorVar = var3; titularMenorVar = codTitular3; }
+                if (var4 < menorVar) { menorVar = var4; titularMenorVar = codTitular4; }
+                if (var5 < menorVar) { menorVar = var5; titularMenorVar = codTitular5; }
+
+                //Exibir
+                printf("Codigo do titular com MAIOR valorizacao percentual: %d (%+.2lf%%)\n", titularMaiorVar, maiorVar);
+                printf("Codigo do titular com MAIOR desvalorizacao percentual: %d (%+.2lf%%)\n", titularMenorVar, menorVar);
+                printf("\n||=============================================================================||\n\n");
+                    
+                    printf("\n\n||=============================================================================||\n\n");
+                    printf("Resumo do Sistema Bancario:\n");
+                    printf("Total de operacoes realizadas: %d\n", totalOperacoes);
+                    printf("Total depositado: %.2lf\n", totalDepositado);
+                    printf("Total sacado: %.2lf\n", totalSacado);
+                    printf("Liquido final (depositado - sacado): %.2lf\n", totalDepositado - totalSacado);
                     
         
          printf("\n\n||=============================================================================||\n\n");
