@@ -62,19 +62,19 @@
         
               for (; codTitular1<1000 || codTitular1>9999;)
               {
-                    printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : ");
+                    printf("\n Erro 1: Digite um numero entre 1000 e 9999: : ");
                     scanf("%d", &codTitular1);
               }
                     printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular: %d.\n", codTitular1);
                     printf("Codigo da sua conta: %d\n", numeroConta1);
 
             // Solicitar o tipo da conta
-                    printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+                    printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
                     scanf("%d", &tipoConta1);
 
               for (; tipoConta1<1 || tipoConta1>3; )
               {
-                    printf("\n Numero invalido! Digite qual sera o tipo da sua conta: \n");
+                    printf("\n  Erro 1: Digite qual sera o tipo da sua conta: \n");
                     scanf("%d", &tipoConta1);
               }
                     printf("Tipo de conta cadastrado com sucesso!\n\n");
@@ -84,7 +84,7 @@
                     printf("\nDigite o limite de cheque especial (>= 0): \n");
                     scanf("%lf", &limiteCheque1);
                     while (limiteCheque1 < 0.0) {
-                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        printf("Erro 2: Digite um valor maior ou igual a 0: \n");
                         scanf("%lf", &limiteCheque1);
                     }
                 } else {
@@ -97,7 +97,7 @@
 
             while (saldoInicial1 <= 0)
             {
-                printf("Saldo inicial negativo! Digite um valor positivo: \n");
+                printf("Erro 3: Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial1);
             }
                 printf("Saldo cadastrado com sucesso! O saldo da sua conta: %.2lf\n", saldoInicial1);
@@ -113,19 +113,19 @@
             
             for (; (codTitular2<1000 || codTitular2>9999) || (codTitular2==codTitular1);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : \n");
+                printf("\n Erro 1: Digite um numero entre 1000 e 9999: : \n");
                 scanf("%d", &codTitular2);      
             }
                 printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular: %d.\n", codTitular2);
                 printf("Codigo da sua conta: %d\n", numeroConta2);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
                 scanf("%d", &tipoConta2);
 
             for (; tipoConta2<1 || tipoConta2>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): ");
+            printf("\n  Erro 1: Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) ");
             scanf("%d", &tipoConta2);
             }
                 printf("\nTipo de conta cadastrado com sucesso!\n");
@@ -135,7 +135,7 @@
                     printf("\nDigite o limite de cheque especial (>= 0): \n");
                     scanf("%lf", &limiteCheque2);
                     while (limiteCheque2 < 0.0) {
-                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        printf("Erro 2: Digite um valor maior ou igual a 0: \n");
                         scanf("%lf", &limiteCheque2);
                     }
                 } else {
@@ -149,7 +149,7 @@
 
             while (saldoInicial2 <= 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
+                printf("\nErro 3: Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial2);
             }
 
@@ -166,19 +166,19 @@
             
             for (; (codTitular3<1000 || codTitular3>9999) || (codTitular3 == codTitular1||codTitular3==codTitular2);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
+                printf("\n Erro 1: Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular3);
             }
                 printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular3);
                 printf("Codigo da sua conta e: %d\n", numeroConta3);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
                 scanf("%d", &tipoConta3);
 
             for (; tipoConta3<1 || tipoConta3>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+            printf("\n  Erro 1: Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
             scanf("%d", &tipoConta3);
             }
                 printf("\nTipo de conta cadastrado com sucesso!\n");
@@ -188,7 +188,7 @@
                     printf("\nDigite o limite de cheque especial (>= 0): \n");
                     scanf("%lf", &limiteCheque3);
                     while (limiteCheque3 < 0.0) {
-                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        printf("Erro 2: Digite um valor maior ou igual a 0: \n");
                         scanf("%lf", &limiteCheque3);
                     }
                 } else {
@@ -201,7 +201,7 @@
 
             while (saldoInicial3 <= 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
+                printf("\nErro 3: Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial3);
             }
                 printf("\nSaldo cadastrado com sucesso! O saldo da sua conta:  %.2lf\n", saldoInicial3);
@@ -216,19 +216,19 @@
   
             for (; (codTitular4<1000 || codTitular4>9999) || (codTitular4 == codTitular1 || codTitular4==codTitular2 || codTitular4==codTitular3);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
+                printf("\n Erro 1: Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular4);      
             }
                 printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular4);
                 printf("Codigo da sua conta e: %d\n", numeroConta4);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
                 scanf("%d", &tipoConta4);
 
             for (; tipoConta4<1 || tipoConta4>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+            printf("\n  Erro 1: Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
             scanf("%d", &tipoConta4);
             }
                 printf("\nTipo de conta cadastrado com sucesso!");
@@ -238,7 +238,7 @@
                     printf("\nDigite o limite de cheque especial (>= 0): \n");
                     scanf("%lf", &limiteCheque4);
                     while (limiteCheque4 < 0.0) {
-                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        printf("Erro 2: Digite um valor maior ou igual a 0: \n");
                         scanf("%lf", &limiteCheque4);
                     }
                 } else {
@@ -251,7 +251,7 @@
 
             while (saldoInicial4 <= 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
+                printf("\nErro 3: Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial4);
             }
 
@@ -268,19 +268,19 @@
             
             for (; (codTitular5<1000 || codTitular5>9999) || (codTitular5 == codTitular1||codTitular5==codTitular2||codTitular5==codTitular3||codTitular5==codTitular4);)
             {
-                printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
+                printf("\n Erro 1: Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular5);  
             }
                 printf("\nCodigo do Titular cadastrado com sucesso! Seu codigo de titular:  %d.\n", codTitular5);
                 printf("Codigo da sua conta e: %d\n", numeroConta5);
 
             // Solicitar o tipo da conta
-               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+               printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
                 scanf("%d", &tipoConta5);
 
             for (; tipoConta5<1 || tipoConta5>3;){
 
-            printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
+            printf("\n  Erro 1: Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario) \n");
             scanf("%d", &tipoConta5);
             }
                 printf("\nTipo de conta cadastrado com sucesso!");
@@ -290,7 +290,7 @@
                     printf("\nDigite o limite de cheque especial (>= 0): \n");
                     scanf("%lf", &limiteCheque5);
                     while (limiteCheque5 < 0.0) {
-                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        printf("Erro 2: Digite um valor maior ou igual a 0: \n");
                         scanf("%lf", &limiteCheque5);
                     }
                 } else {
@@ -303,7 +303,7 @@
 
             while (saldoInicial5 <= 0)
             {
-                printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
+                printf("\nErro 3: Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial5);
             }
 
@@ -329,7 +329,7 @@
             
              while (deposito <= 0)
              {
-                printf("Deposito invalido! Valor negativo ou nulo.\n");
+                printf("Erro 4: Deposito invalido! Valor negativo ou nulo.\n");
                 scanf("%lf", &deposito);
              }
 
@@ -1184,6 +1184,8 @@
                 printf("Erro 1! Conta invalida.\n");
                 return;
             }
+
+           printf("Saude financeira: 1=CRITICA | 2=REGULAR | 3=BOA | 4=EXCELENTE\n");
             
             if(num_conta_escolhida == numeroConta1){
                 printf("Extrato da Conta %d:\n", numeroConta1);
@@ -1195,19 +1197,19 @@
 
                         if (saldo1>= 10 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Excelente (Codigo 4)\n");
+                        printf("Saude financeira: 4-Excelente (Codigo 4)\n");
                     }
                     else if (saldo1 >= 3 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Boa (Codigo 3)\n");
+                        printf("Saude financeira: 3-Boa (Codigo 3)\n");
                     }
                     else if (saldo1 >= 0)
                     {
-                        printf("Saude financeira: Regular (Codigo 2)\n");
+                        printf("Saude financeira: 2-Regular (Codigo 2)\n");
                     }
                     else
                     {
-                        printf("Saude financeira: Ruim (Codigo 1)\n");
+                        printf("Saude financeira: 1-Critica (Codigo 1)\n");
                     }
                 printf("=================================================================\n");
             }
@@ -1221,19 +1223,19 @@
 
                         if (saldo2>= 10 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Excelente (Codigo 4)\n");
+                        printf("Saude financeira: 4-Excelente (Codigo 4)\n");
                     }
                     else if (saldo2 >= 3 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Boa (Codigo 3)\n");
+                        printf("Saude financeira: 3-Boa (Codigo 3)\n");
                     }
                     else if (saldo2 >= 0)
                     {
-                        printf("Saude financeira: Regular (Codigo 2)\n");
+                        printf("Saude financeira: 2-Regular (Codigo 2)\n");
                     }
                     else
                     {
-                        printf("Saude financeira: Ruim (Codigo 1)\n");
+                        printf("Saude financeira: 1-Critica (Codigo 1)\n");
                     }
                 printf("=================================================================\n");
             }
@@ -1247,19 +1249,19 @@
 
                         if (saldo3>= 10 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Excelente (Codigo 4)\n");
+                        printf("Saude financeira: 4-Excelente (Codigo 4)\n");
                     }
                     else if (saldo3 >= 3 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Boa (Codigo 3)\n");
+                        printf("Saude financeira: 3-Boa (Codigo 3)\n");
                     }
                     else if (saldo3 >= 0)
                     {
-                        printf("Saude financeira: Regular (Codigo 2)\n");
+                        printf("Saude financeira: 2-Regular (Codigo 2)\n");
                     }
                     else
                     {
-                        printf("Saude financeira: Ruim (Codigo 1)\n");
+                        printf("Saude financeira: 1-Critica (Codigo 1)\n");
                     }
                 printf("=================================================================\n");
             }
@@ -1273,19 +1275,19 @@
 
                         if (saldo4>= 10 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Excelente (Codigo 4)\n");
+                        printf("Saude financeira: 4-Excelente (Codigo 4)\n");
                     }
                     else if (saldo4 >= 3 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Boa (Codigo 3)\n");
+                        printf("Saude financeira: 3-Boa (Codigo 3)\n");
                     }
                     else if (saldo4 >= 0)
                     {
-                        printf("Saude financeira: Regular (Codigo 2)\n");
+                        printf("Saude financeira: 2-Regular (Codigo 2)\n");
                     }
                     else
                     {
-                        printf("Saude financeira: Ruim (Codigo 1)\n");
+                        printf("Saude financeira: 1-Critica (Codigo 1)\n");
                     }
                 printf("=================================================================\n");
             }
@@ -1299,19 +1301,19 @@
 
                         if (saldo5>= 10 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Excelente (Codigo 4)\n");
+                        printf("Saude financeira: 4-Excelente (Codigo 4)\n");
                     }
                     else if (saldo5 >= 3 * SALARIO_MINIMO)
                     {
-                        printf("Saude financeira: Boa (Codigo 3)\n");
+                        printf("Saude financeira: 3-Boa (Codigo 3)\n");
                     }
                     else if (saldo5 >= 0)
                     {
-                        printf("Saude financeira: Regular (Codigo 2)\n");
+                        printf("Saude financeira: 2- Regular (Codigo 2)\n");
                     }
                     else
                     {
-                        printf("Saude financeira: Ruim (Codigo 1)\n");
+                        printf("Saude financeira: 1-Critica (Codigo 1)\n");
                     }
                 printf("=================================================================\n");
                 
