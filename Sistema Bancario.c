@@ -1186,6 +1186,7 @@
             }
 
            printf("Saude financeira: 1=CRITICA | 2=REGULAR | 3=BOA | 4=EXCELENTE\n");
+           printf("=================================================================\n\n");
             
             if(num_conta_escolhida == numeroConta1){
                 printf("Extrato da Conta %d:\n", numeroConta1);
@@ -1635,8 +1636,6 @@
                 printf("Saldo inicial: %.2lf\n",saldoInicial5);
                 printf("Saldo atual: %.2lf\n", saldo5);
                 printf("=================================================================\n");
-
-                 double variancia;
                 
                 // Calculo das variancias
                 
@@ -1682,10 +1681,10 @@
                     
                     printf("\n\n||=============================================================================||\n\n");
                     printf("Resumo do Sistema Bancario:\n");
-                    printf("Total de operacoes realizadas: %d\n", totalOperacoes);
-                    printf("Total depositado: %.2lf\n", totalDepositado);
-                    printf("Total sacado: %.2lf\n", totalSacado);
-                    printf("Liquido final (depositado - sacado): %.2lf\n", totalDepositado - totalSacado);
+                    printf("Total de operacoes realizadas : %d\n", totalOperacoes);
+                    printf("Total depositado no sistema   : R$ %.2lf\n", totalDepositado);
+                    printf("Total sacado do sistema       : R$ %.2lf\n", totalSacado);
+                    printf("Saldo liquido final do sistema: R$ %.2lf\n", totalDepositado - totalSacado);
                     
         
          printf("\n\n||=============================================================================||\n\n");
@@ -1706,13 +1705,7 @@
                 printf("||=============================================================================||\n\n");
                 printf("\nCadastro da Conta 3\n");
                 cadastrarConta3();
-                printf("||=============================================================================||\n\n");
-                printf("\nCadastro da Conta 4\n");
-                cadastrarConta4();
-                printf("||=============================================================================||\n\n");
-                printf("\nCadastro da Conta 5\n");
-                cadastrarConta5();
-                printf("||=============================================================================||\n\n");
+                
 
         //Menu
 
