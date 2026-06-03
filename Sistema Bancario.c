@@ -966,10 +966,20 @@
             {
                 printf("Valor liquido da transferencia com taxas de 0%%: %.2lf\n", valor_liquido_transferencia);
             }
+            else if (tipoDestino == 3)
+            {
+                if (valorTransferencia >= SALARIO_MINIMO)
+                {
+                    printf("Valor liquido da transferencia com taxas de 0%%: %.2lf\n", valor_liquido_transferencia);
+                }
+                else
+                {
+                    printf("Valor liquido da transferencia com taxas de %.2f%%: %.2lf\n", TAXA_SALARIO * 100, valor_liquido_transferencia);
+                }
+            }
             else
             {
-                double taxa = (valorTransferencia < SALARIO_MINIMO) ? 0.0 : TAXA_SALARIO;
-                printf("Valor liquido da transferencia com taxas de %.1lf%%: %.2lf\n", taxa * 100, valor_liquido_transferencia);
+                printf("Valor liquido da transferencia: %.2lf\n", valor_liquido_transferencia);
             }
 
             if (contaOrigem == numeroConta1)
