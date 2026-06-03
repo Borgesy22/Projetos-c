@@ -42,9 +42,9 @@
         double saldo5;       double saldoInicial5; double limiteCheque5;
 
 //Variaveis para o relatorio final
-        int totalOperacoes = 0.0; 
-        double totalDepositado =0.0; double totalSacado = 0.0; double limite_corrente = 500.00;
-        
+        int totalOperacoes = 0; 
+        double totalDepositado =0.0; double totalSacado = 0.0;
+
         //auxiliar
         int opcao_menu; int num_conta_escolhida;    
         double deposito; double saque; double Valor_liquido; 
@@ -60,7 +60,7 @@
                     printf("Digite qual sera o seu Codigo do Titular: \n");
                     scanf("%d", &codTitular1);
         
-              for (codTitular1 ; codTitular1<1000 || codTitular1>9999;)
+              for (; codTitular1<1000 || codTitular1>9999;)
               {
                     printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : ");
                     scanf("%d", &codTitular1);
@@ -72,7 +72,7 @@
                     printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                     scanf("%d", &tipoConta1);
 
-              for ( tipoConta1; tipoConta1<1 || tipoConta1>3; )
+              for (; tipoConta1<1 || tipoConta1>3; )
               {
                     printf("\n Numero invalido! Digite qual sera o tipo da sua conta: \n");
                     scanf("%d", &tipoConta1);
@@ -81,10 +81,13 @@
 
             // Limite de cheque especial
                 if (tipoConta1 == 1) {
-                    limiteCheque1 = limite_corrente;
-                } else if (tipoConta1 == 2) {
-                    limiteCheque1 = 0.0;
-                } else if (tipoConta1 == 3) {
+                    printf("\nDigite o limite de cheque especial (>= 0): \n");
+                    scanf("%lf", &limiteCheque1);
+                    while (limiteCheque1 < 0.0) {
+                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        scanf("%lf", &limiteCheque1);
+                    }
+                } else {
                     limiteCheque1 = 0.0;
                 }
 
@@ -92,7 +95,7 @@
                 printf("Digite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial1);
 
-            while (saldoInicial1 < 0)
+            while (saldoInicial1 <= 0)
             {
                 printf("Saldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial1);
@@ -108,7 +111,7 @@
             scanf("%d", &codTitular2);
 
             
-            for (codTitular2; (codTitular2<1000 || codTitular2>9999) || (codTitular2==codTitular1);)
+            for (; (codTitular2<1000 || codTitular2>9999) || (codTitular2==codTitular1);)
             {
                 printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: : \n");
                 scanf("%d", &codTitular2);      
@@ -120,7 +123,7 @@
                printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta2);
 
-            for (tipoConta2; tipoConta2<1 || tipoConta2>3;){
+            for (; tipoConta2<1 || tipoConta2>3;){
 
             printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): ");
             scanf("%d", &tipoConta2);
@@ -129,10 +132,13 @@
         
             // Limite de cheque especial
                 if (tipoConta2 == 1) {
-                    limiteCheque2 = limite_corrente;
-                } else if (tipoConta2 == 2) {
-                    limiteCheque2 = 0.0;
-                } else if (tipoConta2 == 3) {
+                    printf("\nDigite o limite de cheque especial (>= 0): \n");
+                    scanf("%lf", &limiteCheque2);
+                    while (limiteCheque2 < 0.0) {
+                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        scanf("%lf", &limiteCheque2);
+                    }
+                } else {
                     limiteCheque2 = 0.0;
                 }
 
@@ -141,7 +147,7 @@
                 printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial2);
 
-            while (saldoInicial2 < 0)
+            while (saldoInicial2 <= 0)
             {
                 printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial2);
@@ -158,7 +164,7 @@
             scanf("%d", &codTitular3);
 
             
-            for (codTitular3; (codTitular3<1000 || codTitular3>9999) || (codTitular3 == codTitular1||codTitular3==codTitular2);)
+            for (; (codTitular3<1000 || codTitular3>9999) || (codTitular3 == codTitular1||codTitular3==codTitular2);)
             {
                 printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular3);
@@ -170,7 +176,7 @@
                printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta3);
 
-            for (tipoConta3; tipoConta3<1 || tipoConta3>3;){
+            for (; tipoConta3<1 || tipoConta3>3;){
 
             printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta3);
@@ -179,10 +185,13 @@
             
             // Limite de cheque especial
                 if (tipoConta3 == 1) {
-                    limiteCheque3 = limite_corrente;
-                } else if (tipoConta3 == 2) {
-                    limiteCheque3 = 0.0;
-                } else if (tipoConta3 == 3) {
+                    printf("\nDigite o limite de cheque especial (>= 0): \n");
+                    scanf("%lf", &limiteCheque3);
+                    while (limiteCheque3 < 0.0) {
+                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        scanf("%lf", &limiteCheque3);
+                    }
+                } else {
                     limiteCheque3 = 0.0;
                 }
 
@@ -190,7 +199,7 @@
                 printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial3);
 
-            while (saldoInicial3 < 0)
+            while (saldoInicial3 <= 0)
             {
                 printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial3);
@@ -205,7 +214,7 @@
            printf("\nDigite qual sera o seu Codigo do Titular: \n");
             scanf("%d", &codTitular4);
   
-            for (codTitular4; (codTitular4<1000 || codTitular4>9999) || (codTitular4 == codTitular1 || codTitular4==codTitular2 || codTitular4==codTitular3);)
+            for (; (codTitular4<1000 || codTitular4>9999) || (codTitular4 == codTitular1 || codTitular4==codTitular2 || codTitular4==codTitular3);)
             {
                 printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular4);      
@@ -217,7 +226,7 @@
                printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta4);
 
-            for (tipoConta4; tipoConta4<1 || tipoConta4>3;){
+            for (; tipoConta4<1 || tipoConta4>3;){
 
             printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta4);
@@ -226,10 +235,13 @@
             
             // Limite de cheque especial
                 if (tipoConta4 == 1) {
-                    limiteCheque4 = limite_corrente;
-                } else if (tipoConta4 == 2) {
-                    limiteCheque4 = 0.0;
-                } else if (tipoConta4 == 3) {
+                    printf("\nDigite o limite de cheque especial (>= 0): \n");
+                    scanf("%lf", &limiteCheque4);
+                    while (limiteCheque4 < 0.0) {
+                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        scanf("%lf", &limiteCheque4);
+                    }
+                } else {
                     limiteCheque4 = 0.0;
                 }
 
@@ -237,7 +249,7 @@
                 printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial4);
 
-            while (saldoInicial4 < 0)
+            while (saldoInicial4 <= 0)
             {
                 printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial4);
@@ -254,7 +266,7 @@
             scanf("%d", &codTitular5);
 
             
-            for (codTitular5; (codTitular5<1000 || codTitular5>9999) || (codTitular5 == codTitular1||codTitular5==codTitular2||codTitular5==codTitular3||codTitular5==codTitular4);)
+            for (; (codTitular5<1000 || codTitular5>9999) || (codTitular5 == codTitular1||codTitular5==codTitular2||codTitular5==codTitular3||codTitular5==codTitular4);)
             {
                 printf("\nCodigo do Titular invalido! Digite um numero entre 1000 e 9999: \n");
                 scanf("%d", &codTitular5);  
@@ -266,7 +278,7 @@
                printf("\nDigite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
                 scanf("%d", &tipoConta5);
 
-            for (tipoConta5; tipoConta5<1 || tipoConta5>3;){
+            for (; tipoConta5<1 || tipoConta5>3;){
 
             printf("\n Numero invalido! Digite qual sera o tipo da sua conta (1 para Corrente, 2 para Poupanca ou 3 para Salario): \n");
             scanf("%d", &tipoConta5);
@@ -275,10 +287,13 @@
             
             // Limite de cheque especial
                 if (tipoConta5 == 1) {
-                    limiteCheque5 = limite_corrente;
-                } else if (tipoConta5 == 2) {
-                    limiteCheque5 = 0.0;
-                } else if (tipoConta5 == 3) {
+                    printf("\nDigite o limite de cheque especial (>= 0): \n");
+                    scanf("%lf", &limiteCheque5);
+                    while (limiteCheque5 < 0.0) {
+                        printf("Limite invalido! Digite um valor maior ou igual a 0: \n");
+                        scanf("%lf", &limiteCheque5);
+                    }
+                } else {
                     limiteCheque5 = 0.0;
                 }
 
@@ -286,7 +301,7 @@
                 printf("\nDigite o saldo da sua conta: \n");
                 scanf("%lf", &saldoInicial5);
 
-            while (saldoInicial5 < 0)
+            while (saldoInicial5 <= 0)
             {
                 printf("\nSaldo inicial negativo! Digite um valor positivo: \n");
                 scanf("%lf", &saldoInicial5);
@@ -345,7 +360,7 @@
                     printf("        Saldo atual apos operacao: %.2lf\n",saldo1);
                 }
                 else if (tipoConta1 == 3){
-                    if (deposito <= SALARIO_MINIMO)
+                    if (deposito >= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo1 = saldo1 + Valor_liquido;
@@ -400,7 +415,7 @@
                     printf("        Saldo atual apos operacao: %.2lf\n",saldo2);
                 }
                 else if (tipoConta2 == 3){
-                    if (deposito <= SALARIO_MINIMO)
+                    if (deposito >= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo2 = saldo2 + Valor_liquido;
@@ -455,7 +470,7 @@
                     printf("        Saldo atual apos operacao: %.2lf\n",saldo3);
                 }
                 else if (tipoConta3 == 3){
-                    if (deposito <= SALARIO_MINIMO)
+                    if (deposito >= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo3 = saldo3 + Valor_liquido;
@@ -509,7 +524,7 @@
                     printf("        Saldo atual apos operacao: %.2lf\n",saldo4);
                 }
                 else if (tipoConta4 == 3){
-                    if (deposito <= SALARIO_MINIMO)
+                    if (deposito >= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;
                         saldo4 = saldo4 + Valor_liquido;
@@ -564,7 +579,7 @@
                     printf("        Saldo atual apos operacao: %.2lf\n",saldo5);
                 }
                 else if (tipoConta5 == 3){
-                    if (deposito <= SALARIO_MINIMO)
+                    if (deposito >= SALARIO_MINIMO)
                     {
                         Valor_liquido = deposito;   
                         saldo5 = saldo5 + Valor_liquido;
@@ -1019,13 +1034,21 @@
             saldoAnterior = saldo1;
             if (saldoAnterior < 0)
             {
-                saldoFinal = saldoAnterior * 1.03;
-                valorAplicado = saldoFinal - saldoAnterior;
+                if (tipoConta1 == 1)
+                {
+                    saldoFinal = saldoAnterior;
+                    valorAplicado = 0.0;
+                }
+                else
+                {
+                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                    valorAplicado = saldoFinal - saldoAnterior;
+                }
                 saldo1 = saldoFinal;
             }
             else if (tipoConta1 == 2)
             {
-                saldoFinal = saldoAnterior * 1.005;
+                saldoFinal = saldoAnterior + saldoAnterior * RENDIMENTO_POUPANCA;
                 valorAplicado = saldoFinal - saldoAnterior;
                 saldo1 = saldoFinal;
             }
@@ -1045,13 +1068,21 @@
             saldoAnterior = saldo2;
             if (saldoAnterior < 0)
             {
-                saldoFinal = saldoAnterior * 1.03;
-                valorAplicado = saldoFinal - saldoAnterior;
+                if (tipoConta2 == 1)
+                {
+                    saldoFinal = saldoAnterior;
+                    valorAplicado = 0.0;
+                }
+                else
+                {
+                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                    valorAplicado = saldoFinal - saldoAnterior;
+                }
                 saldo2 = saldoFinal;
             }
             else if (tipoConta2 == 2)
             {
-                saldoFinal = saldoAnterior * 1.005;
+                saldoFinal = saldoAnterior + saldoAnterior * RENDIMENTO_POUPANCA;
                 valorAplicado = saldoFinal - saldoAnterior;
                 saldo2 = saldoFinal;
             }
@@ -1071,13 +1102,21 @@
             saldoAnterior = saldo3;
             if (saldoAnterior < 0)
             {
-                saldoFinal = saldoAnterior * 1.03;
-                valorAplicado = saldoFinal - saldoAnterior;
+                if (tipoConta3 == 1)
+                {
+                    saldoFinal = saldoAnterior;
+                    valorAplicado = 0.0;
+                }
+                else
+                {
+                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                    valorAplicado = saldoFinal - saldoAnterior;
+                }
                 saldo3 = saldoFinal;
             }
             else if (tipoConta3 == 2)
             {
-                saldoFinal = saldoAnterior * 1.005;
+                saldoFinal = saldoAnterior + saldoAnterior * RENDIMENTO_POUPANCA;
                 valorAplicado = saldoFinal - saldoAnterior;
                 saldo3 = saldoFinal;
             }
@@ -1097,13 +1136,21 @@
             saldoAnterior = saldo4;
             if (saldoAnterior < 0)
             {
-                saldoFinal = saldoAnterior * 1.03;
-                valorAplicado = saldoFinal - saldoAnterior;
+                if (tipoConta4 == 1)
+                {
+                    saldoFinal = saldoAnterior;
+                    valorAplicado = 0.0;
+                }
+                else
+                {
+                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                    valorAplicado = saldoFinal - saldoAnterior;
+                }
                 saldo4 = saldoFinal;
             }
             else if (tipoConta4 == 2)
             {
-                saldoFinal = saldoAnterior * 1.005;
+                saldoFinal = saldoAnterior + saldoAnterior * RENDIMENTO_POUPANCA;
                 valorAplicado = saldoFinal - saldoAnterior;
                 saldo4 = saldoFinal;
             }
@@ -1123,13 +1170,21 @@
             saldoAnterior = saldo5;
             if (saldoAnterior < 0)
             {
-                saldoFinal = saldoAnterior * 1.03;
-                valorAplicado = saldoFinal - saldoAnterior;
+                if (tipoConta5 == 1)
+                {
+                    saldoFinal = saldoAnterior;
+                    valorAplicado = 0.0;
+                }
+                else
+                {
+                    saldoFinal = saldoAnterior * (1.0 + JUROS_MORA);
+                    valorAplicado = saldoFinal - saldoAnterior;
+                }
                 saldo5 = saldoFinal;
             }
             else if (tipoConta5 == 2)
             {
-                saldoFinal = saldoAnterior * 1.005;
+                saldoFinal = saldoAnterior + saldoAnterior * RENDIMENTO_POUPANCA;
                 valorAplicado = saldoFinal - saldoAnterior;
                 saldo5 = saldoFinal;
             }
@@ -1564,13 +1619,16 @@
                 }
                 printf(" %d\n", contasSalario);
 
+                printf("Total de operacoes: %d\n", totalOperacoes);
+                printf("Total depositado: %.2lf\n", totalDepositado);
+                printf("Total sacado: %.2lf\n", totalSacado);
                 printf("===========================================================\n\n");
                 
             
                 printf("Extrato da Conta %d:\n", numeroConta1);
                 printf("Numero da conta: %d\n", numeroConta1);
                 printf("Codigo do titular: %d\n", codTitular1);
-                printf("Saldo inicial: %f\n",saldoInicial1);               
+                printf("Saldo inicial: %.2lf\n",saldoInicial1);               
                 printf("Saldo atual: %.2lf\n", saldo1);
                 printf("=================================================================\n");
             
@@ -1578,7 +1636,7 @@
                 printf("Extrato da Conta %d:\n", numeroConta2);
                 printf("Numero da conta: %d\n", numeroConta2);
                 printf("Codigo do titular: %d\n", codTitular2);
-                printf("Saldo inicial: %f\n",saldoInicial2);              
+                printf("Saldo inicial: %.2lf\n",saldoInicial2);              
                 printf("Saldo atual: %.2lf\n", saldo2);
                 printf("=================================================================\n");
             
@@ -1586,7 +1644,7 @@
                 printf("Extrato da Conta %d:\n", numeroConta3);
                 printf("Numero da conta: %d\n", numeroConta3);
                 printf("Codigo do titular: %d\n", codTitular3);
-                printf("Saldo inicial: %f\n",saldoInicial3);         
+                printf("Saldo inicial: %.2lf\n",saldoInicial3);         
                 printf("Saldo atual: %.2lf\n", saldo3);
                 printf("=================================================================\n");
             
@@ -1594,36 +1652,52 @@
                 printf("Extrato da Conta %d:\n", numeroConta4);
                 printf("Numero da conta: %d\n", numeroConta4);
                 printf("Codigo do titular: %d\n", codTitular4);
-                printf("Saldo inicial: %f\n",saldoInicial4);               
+                printf("Saldo inicial: %.2lf\n",saldoInicial4);               
                 printf("Saldo atual: %.2lf\n", saldo4);
                 printf("=================================================================\n");
             
             
                 printf("Extrato da Conta %d:\n", numeroConta5);
-                printf("Numero da conta: %d\n", numeroConta5);
-                printf("Saldo inicial: %f\n",saldoInicial5);
+                printf("Numero da conta: %d\n", numeroConta5);             
                 printf("Codigo do titular: %d\n", codTitular5);
+                printf("Saldo inicial: %.2lf\n",saldoInicial5);
                 printf("Saldo atual: %.2lf\n", saldo5);
                 printf("=================================================================\n");
 
                  double variancia;
                 
-                //Calculo das variancias
-                    variancia = ((saldo1 - saldoInicial1)/saldoInicial1) * 100;
-                    printf("Variacao percentual da conta 1001:%f", variancia);
-                
-                    variancia = ((saldo2 - saldoInicial2)/saldoInicial2) * 100;
-                     printf("Variacao percentual da conta 1002:%f", variancia);
-               
-                    variancia = ((saldo3 - saldoInicial3)/saldoInicial3) * 100;
-                     printf("Variacao percentual da conta 1003:%f", variancia);
-               
-                    variancia = ((saldo4 - saldoInicial4)/saldoInicial4) * 100;
-                     printf("Variacao percentual da conta 1004:%f", variancia);
-                
-                    variancia = ((saldo5 - saldoInicial5)/saldoInicial5) * 100;
-                     printf("Variacao percentual da conta 1005:%f", variancia);
-                     
+                // Calculo das variancias
+                    if (saldoInicial1 != 0.0) {
+                        variancia = ((saldo1 - saldoInicial1) / saldoInicial1) * 100;
+                        printf("Variacao percentual da conta 1001: %.2lf%%\n", variancia);
+                    } else {
+                        printf("Variacao percentual da conta 1001: N/A (saldo inicial zero)\n");
+                    }
+                    if (saldoInicial2 != 0.0) {
+                        variancia = ((saldo2 - saldoInicial2) / saldoInicial2) * 100;
+                        printf("Variacao percentual da conta 1002: %.2lf%%\n", variancia);
+                    } else {
+                        printf("Variacao percentual da conta 1002: N/A (saldo inicial zero)\n");
+                    }
+                    if (saldoInicial3 != 0.0) {
+                        variancia = ((saldo3 - saldoInicial3) / saldoInicial3) * 100;
+                        printf("Variacao percentual da conta 1003: %.2lf%%\n", variancia);
+                    } else {
+                        printf("Variacao percentual da conta 1003: N/A (saldo inicial zero)\n");
+                    }
+                    if (saldoInicial4 != 0.0) {
+                        variancia = ((saldo4 - saldoInicial4) / saldoInicial4) * 100;
+                        printf("Variacao percentual da conta 1004: %.2lf%%\n", variancia);
+                    } else {
+                        printf("Variacao percentual da conta 1004: N/A (saldo inicial zero)\n");
+                    }
+                    if (saldoInicial5 != 0.0) {
+                        variancia = ((saldo5 - saldoInicial5) / saldoInicial5) * 100;
+                        printf("Variacao percentual da conta 1005: %.2lf%%\n", variancia);
+                    } else {
+                        printf("Variacao percentual da conta 1005: N/A (saldo inicial zero)\n");
+                    }
+                    
         
          printf("\n\n||=============================================================================||\n\n");
     }
@@ -1650,6 +1724,7 @@
                 printf("\nCadastro da Conta 5\n");
                 cadastrarConta5();
                 printf("||=============================================================================||\n\n");
+
         //Menu
 
         do {
@@ -1663,7 +1738,7 @@
 
                 switch (opcao_menu)
                 {
-                       case 0:
+                    case 0:
                         relatorioFinal();
                         break;
                     case 1:
@@ -1684,7 +1759,9 @@
                     case 6:
                         relatorioGeral();
                         break;
-                    
+                    default:
+                        printf("Opcao invalida! Digite uma opcao valida do menu.\n\n");
+                        break;
                 }
             }
 
